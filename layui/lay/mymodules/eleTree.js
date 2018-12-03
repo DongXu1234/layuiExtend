@@ -391,8 +391,10 @@ layui.define(["jquery","laytpl","layer","form"], function (exports) {
                         var data=self.reInitData(node);
                         var d=data.currentData;
                         d.children?"":d.children=[];
+                        //Change new node to be a leaf
                         var obj={
-                            label: value
+                            label: value, 
+                            isLeaf : true,
                         }
                         isChecked?obj.checked=true:"";
                         d.children.push(obj);
